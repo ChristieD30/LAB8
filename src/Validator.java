@@ -40,7 +40,7 @@ public class Validator {
 	}
 
 	public static double getDouble(Scanner sc, String prompt) {
-		double d = 0;
+		double d = 0.0;
 		boolean isValid = false;
 		while (isValid == false) {
 			System.out.print(prompt);

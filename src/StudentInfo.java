@@ -13,20 +13,21 @@ public class StudentInfo {
 		String[] food = { "french fries", "ginger", "botana", "lasagna", "grapefruit", "tacos" };
 
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Welcome to our Java Class.");
+		System.out.println("Welcome to our Java Class.\n");
 
 		//print the array as a list
 		for (int j = 0; j < names.length; j++) {
 			System.out.println((j + 1) + ". " + names[j]);
 		}
 		//validates that they entered a number that will work. 
-		i = Validator.getInt(scan, "Please print a number 1-6 to learn about that student.", 1, names.length);
+		i = Validator.getInt(scan, "\nPlease print a number 1-6 to learn about that student.\n", 1, names.length);
 
 		String userNames = names[i - 1];
 
-		System.out.println("Student number " + i + " is " + userNames);
+		System.out.println("\nStudent number " + i + " is " + userNames);
 
-		System.out.println("What would you like to know about " + userNames + "?");
+		System.out.println("\nWhat would you like to know about " + userNames + "?");
+		
 		do {
 
 			String userChoice = Validator.getString(scan, "Enter hometown or food.");
@@ -40,14 +41,17 @@ public class StudentInfo {
 				System.out.println(userNames + "'s hometown is " + userHometown + ".");
 				
 			} else if (userChoice.equalsIgnoreCase("food")) {
+				
 				String userFood = food[i - 1];
+				
 				System.out.println(userNames + "'s favorite food is " + userFood + ".");
 				
 			} else {
 				System.out.println("That is not a valid option.");	
 			
 			}
-			//promt them to restart the program
+			
+			//prompt them to restart the program
 			System.out.println("Would you like to know something else about " + userNames + "?");
 			System.out.println("Enter Yes or no.");
 
@@ -61,10 +65,6 @@ public class StudentInfo {
 
 	}
 
-	}
-	
-	
-	
-
+}
 
 
